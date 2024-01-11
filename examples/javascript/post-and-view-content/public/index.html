@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNSアプリ</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="sticky-header">
+        <div class="content">
+          <h1>Post and View Content</h1>
+        </div>
+      </header>
+
+      <main class="main">
+        <form id="uploadForm" class="upload-form">
+          <textarea
+            id="uploadFormTextarea"
+            class="textarea"
+            name="text"
+            placeholder="テキストを入力"
+          ></textarea>
+
+          <div class="media-preview" id="imageContainer" style="display: none">
+            <span class="close-btn material-symbols-outlined" id="removeImage">
+              close
+            </span>
+            <img id="imagePreview" src="#" alt="Uploaded Image" />
+          </div>
+
+          <div class="media-preview" id="videoContainer" style="display: none">
+            <span class="close-btn material-symbols-outlined" id="removeVideo">
+              close
+            </span>
+            <video id="videoPreview" controls></video>
+          </div>
+
+          <div class="footer">
+            <div class="left-side">
+              <input
+                class="file-input"
+                type="file"
+                name="file"
+                id="fileInput"
+                accept="image/*,video/*"
+                style="display: none"
+              />
+              <span
+                role="button"
+                tabindex="0"
+                class="material-symbols-outlined upload-icon button-focus"
+                id="uploadIcon"
+                class="upload-icon"
+                data-tooltip="メディア"
+              >
+                photo
+              </span>
+            </div>
+            <button class="submit-button button-focus" type="submit">
+              ポストする
+            </button>
+          </div>
+        </form>
+
+        <div id="posts" class="post-container">
+          <!-- 投稿の表示領域 -->
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

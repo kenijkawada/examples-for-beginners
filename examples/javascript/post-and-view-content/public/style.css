@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  color: white;
+  background-color: #15202b;
+  font-size: 100%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.button-focus:focus {
+  outline: 2px solid skyblue;
+}
+
+.app {
+  .sticky-header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background-color: #15202b;
+    padding-block: 0.5rem;
+    border-bottom: 1px solid #38444d;
+    height: 64px;
+    margin-block-end: 1rem;
+
+    .content {
+      container: headerContent / size;
+      max-width: 600px;
+      height: 100%;
+      margin-inline: auto;
+      padding-inline: 1rem;
+
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      /* コンテナーが 500px より広い場合 */
+      @container headerContent (min-width: 500px) {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .main {
+    max-width: 600px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #15202b;
+    margin-block-end: 3rem;
+
+    .upload-form {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 1rem;
+      border: 1px solid #38444d;
+      border-radius: 10px;
+
+      .media-preview {
+        position: relative;
+        display: inline-block;
+
+        .close-btn {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          cursor: pointer;
+          background-color: rgba(0, 0, 0, 0.5); /* ボタンの背景を半透明に */
+          height: 40px;
+          width: 40px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid inherit;
+          border-radius: 50%;
+          z-index: 10;
+        }
+
+        img,
+        video {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-side {
+          position: relative;
+
+          .upload-icon {
+            height: 40px;
+            width: 40px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid inherit;
+            border-radius: 50%;
+          }
+
+          .upload-icon:hover {
+            cursor: pointer;
+            background-color: #38444d;
+            border: 1px solid #38444d;
+            border-radius: 50%;
+          }
+
+          /* ツールチップの基本スタイル */
+          .upload-icon[data-tooltip]:hover::before {
+            content: attr(data-tooltip); /* data-tooltipの内容を表示 */
+            position: absolute; /* アイコンに対する相対位置で配置 */
+            top: 100%; /* アイコンのすぐ下に配置 */
+            left: 50%; /* アイコンの中央から左に移動 */
+            transform: translateX(
+              -50%
+            ); /* ツールチップの中心を基準に左に移動 */
+            padding-block: 2px 5px;
+            padding-inline: 8px;
+            background-color: slategray;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            white-space: nowrap; /* テキストの折り返しを防止 */
+            pointer-events: none; /* ツールチップ上のマウスイベントを無効にする */
+          }
+        }
+
+        .submit-button {
+          height: 2.5rem;
+          padding-block: 0.5rem;
+          padding-inline: 1rem;
+          background-color: hsl(210, 100%, 56%);
+          color: white;
+          font-weight: bold;
+          border: 1px solid hsl(210, 100%, 56%);
+          border-radius: 3rem;
+        }
+
+        .submit-button:hover {
+          cursor: pointer;
+          background-color: hsl(210, 100%, 56%, 80%);
+          border: 1px solid hsl(210, 100%, 56%, 80%);
+        }
+      }
+
+      .textarea {
+        background-color: #15202b;
+        color: white;
+        border: 0;
+        padding: 0.5rem;
+        font-size: 1.25rem;
+        /* height: calc(1.25rem); */
+        resize: none;
+      }
+
+      .textarea:focus {
+        outline: none;
+      }
+
+      .textarea::placeholder {
+        font-size: 1.25rem;
+        opacity: 1;
+      }
+    }
+
+    .post-container {
+      display: flex;
+      flex-direction: column;
+
+      .post-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-block: 2rem;
+        padding-inline: 1rem;
+        border-bottom: 1px solid #38444d;
+        background-color: #15202b;
+
+        img,
+        video {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
