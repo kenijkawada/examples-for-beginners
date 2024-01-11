@@ -9,3 +9,5 @@
 [StackBlitz](http://stackblitz.com/) でプレビューを確認することができます。
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/kenijkawada/examples-for-beginners/tree/main/examples/javascript/table-pagination)
+
+https://stackblitz.com/edit/github-gpegnr?embed=1&file=README.md
