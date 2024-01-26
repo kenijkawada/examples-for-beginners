@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack Visualizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Stack Visualizer</h1>
+      <input type="text" id="inputElement" placeholder="Enter an element" />
+      <button onclick="pushElement()">Push</button>
+      <button onclick="popElement()">Pop</button>
+
+      <div id="stackSize">Size: 0</div>
+      <div id="stackContainer">
+        <ul id="stackList"></ul>
+      </div>
+      <div id="toast" class="hide"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
