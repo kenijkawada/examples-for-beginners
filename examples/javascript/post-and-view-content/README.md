@@ -40,5 +40,5 @@ pnpm install # or npm install or yarn install
 4: アプリケーションを実行します。
 
 ```bash
-pnpm dev # or npm dev or yarn dev
+pnpm dev # or npm run dev or yarn dev
 ```
