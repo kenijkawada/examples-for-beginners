@@ -14,6 +14,7 @@ HTML, CSS, JavaScript の基本的な使い方やデータ構造、アルゴリ�
 - [キュー（Queue）](data-structures/queue/README.md)
 - [優先度付きキュー（Priority Queue）](data-structures/priority-queue/README.md)
 - [バイナリーヒープ（Binary Heap）](data-structures/binary-heap/README.md)
+- [ハッシュテーブル](data-structures/hash-table/README.md)
 
 ### 実装サンプル
 
