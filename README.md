@@ -20,6 +20,7 @@ HTML, CSS, JavaScript の基本的な使い方やデータ構造、アルゴリ�
 
 - [テーブルのページネーション](examples/javascript/table-pagination/README.md)
 - [コンテンツの投稿と閲覧](examples/javascript/post-and-view-content/README.md)
+- [優先度付きキュービジュアライザー](examples/javascript/priority-queue-visualizer/README.md)
 
 ## ローカルでの実行準備
 
