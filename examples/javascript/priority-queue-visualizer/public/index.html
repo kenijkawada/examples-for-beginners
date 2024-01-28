@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Priority Queue Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Priority Queue Visualizer</h1>
+      <div class="inputContainer">
+        <input type="text" id="elementValue" placeholder="Enter value" />
+        <input
+          type="number"
+          id="elementPriority"
+          placeholder="Enter priority"
+        />
+      </div>
+      <div class="buttonContainer">
+        <button id="enqueue">Enqueue</button>
+        <button id="dequeue">Dequeue</button>
+      </div>
+
+      <div class="queueContainer">
+        <h3>Queue</h3>
+        <div class="container">
+          <div class="labelContainer">
+            <span class="label"> index: </span>
+            <span class="label"> priority: </span>
+            <span class="label"> value: </span>
+          </div>
+          <div id="queueList">
+            <!-- renderQueueで生成されるHTML -->
+            <!-- <div class="element">
+              <span>1</span>
+              <div class="value">A</div>
+            </div>
+            <div class="element">
+              <span>2</span>
+              <div class="value">B</div>
+            </div>
+            <div class="element">
+              <span>3</span>
+              <div class="value">C</div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div id="binaryHeapContainer">
+        <h3>Binary Heap</h3>
+        <div id="binaryHeap">
+          <!--renderTreeで生成されるHTML  -->
+          <!-- <div id="rootNode">0</div>
+            <div class="nodeContainer">
+              <div class="node">
+                1
+                <div class="nodeContainer">
+                  <div class="node">
+                    3
+                    <div class="nodeContainer">
+                      <div class="leafNode">7</div>
+                      <div class="leafNode">8</div>
+                    </div>
+                  </div>
+                  <div class="leafNode">4</div>
+                </div>
+              </div>
+              <div class="node">
+                2
+                <div class="nodeContainer">
+                  <div class="leafNode">5</div>
+                  <div class="leafNode">6</div>
+                </div>
+              </div>
+            </div> -->
+        </div>
+      </div>
+
+      <div id="toast" class="hide"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

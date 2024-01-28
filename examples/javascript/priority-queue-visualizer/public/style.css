@@ -1,0 +1,190 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+#app {
+  box-sizing: border-box;
+  margin-inline: auto;
+  margin-block: 20px;
+  max-width: 1440px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h1,
+  h3 {
+    margin-block: 0;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    #elementValue,
+    #elementPriority {
+      padding: 10px;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    button {
+      max-width: 100px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .queueContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      .labelContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .label {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .label:last-child {
+          height: 50px;
+          width: 50px;
+        }
+      }
+
+      #queueList {
+        display: flex;
+        flex-direction: row;
+
+        .element {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+
+          .value {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid grey;
+            border-right: none;
+          }
+        }
+        .element:last-child {
+          .value {
+            border-right: 1px solid grey;
+          }
+        }
+      }
+    }
+  }
+
+  #binaryHeapContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    #binaryHeap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+
+      text-align: center;
+      font-size: 1.2rem;
+      border: 1px solid grey;
+
+      #rootNode {
+        color: #4fbff2;
+      }
+
+      .nodeContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        .node {
+          color: #46ef46;
+        }
+
+        .leafNode {
+          min-width: 15px;
+          color: #7a7878;
+        }
+      }
+    }
+  }
+
+  #toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 30px;
+    font-size: 17px;
+  }
+
+  #toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
