@@ -38,7 +38,7 @@ function dequeueElement() {
   const removedElement = priorityQueue.dequeue();
   renderQueue();
   renderTree();
-  showToast(`${removedElement.value} がスタックから取り出されました！`);
+  showToast(`${removedElement.value} がキューから取り出されました！`);
 }
 
 function renderQueue() {
